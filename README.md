@@ -1,4 +1,4 @@
-![Image grunt vs gulp](https://github.com/Galilee/vt-grunt-gulp/tree/master/web/static/img/gruntVSgulp.jpeg)
+![Image grunt vs gulp](https://raw.githubusercontent.com/Galilee/vt-grunt-gulp/master/web/static/img/gruntVSgulp.jpeg)
 
 # Example d'utilisation avec Grunt / Gulp
 
