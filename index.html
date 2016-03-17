@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Veille Techno: Grunt VS Gulp</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/white.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/css/zenburn.css">
+  <link rel="stylesheet" href="own.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2 class="title">Grunt VS Gulp</h2>
+        <div class="content">
+          <p><i>Les `Javascript Tasks Runners`</i></p>
+          <img data-src="gruntVSgulp.jpeg">
+        </div>
+        <p><small><a href="https://github.com/ubikz">Ubikz.</a> _ 12 novembre 2015 - by <strong>Galilée</strong></small></p>
+      </section>
+      <section>
+        <h3 class="title">Sommaire</h3>
+        <div class="content">
+          <ol>
+            <li class="main">Grunt / Gulp
+              <ol>
+                <li class="second">Présentation</li>
+                <li class="second">Pré-requis et installation</li>
+                <li class="second">Grunt VS Gulp</li>
+              </ol>
+            </li>
+            <li class="main">Exemples concret
+              <ol>
+                <li class="second">Présentation du code</li>
+                <li class="second">Exécution du code</li>
+              </ol>
+            </li>
+            <li class="main">Questions ?</li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <section>
+          <h3 class="title">1 - Grunt / Gulp - <small class="subtitle">Présentation</small></h3>
+          <div class="content">
+            <ul>
+              <li class="main">Outils développés en <strong>Javascripts</strong> et basés sur <strong>NodeJS</strong></li>
+              <li class="main">Outils <strong>d'automatisation</strong></li>
+              <li class="main">On appelle ça des <strong>"Tasks Runners"</strong></li>
+              <li class="main">Exemples : pre-processing, minification, compilation, TU, linting etc.</li>
+              <li class="main">Gestion de workflow au niveau des <strong>tasks</strong></li>
+              <li class="main">Beaucoup de <strong>plugins</strong> disponibles</li>
+              <li class="main"><u>Objectif : </u> industrialiser et gagner du temps sur les tâches ingrates</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h3 class="title">1 - Grunt / Gulp - <small class="subtitle">Pré-requis et installation</small></h3>
+          <div class="content">
+            <ul>
+              <li class="main">Nécessite <strong>NodeJS</strong></li>
+              <li class="main">Nécessite l'installation de <strong>NPM</strong> (gestionnaire de dépendances)</li>
+              <li class="main">Installation de <strong>grunt-cli</strong> et de <strong>gulp-cli</strong> en une ligne de commande
+                <ul>
+                  <li class="second">
+                    <pre><code>npm install grunt-cli -g</code></pre>
+                  </li>
+                  <li class="second">
+                    <pre><code>npm install gulp-cli -g</code></pre>
+                  </li>
+                </ul>
+              </li>
+              <li class="main">Toujours avoir un <strong>Gruntfile.js / Gulpfile.js</strong> là où on exécute notre commande</li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h3 class="title">1 - Grunt / Gulp - <small class="subtitle">Grunt VS Gulp (1/2)</small></h3>
+          <div class="content">
+            <ul>
+              <li class="main">Globalement, ils sont identiques <i>hormis</i> quelques éléments</li>
+              <li class="main">Grunt
+                <ul>
+                  <li class="second">Avantages
+                    <ul>
+                      <li class="third">Là depuis plus longtemps donc grosse communauté</li>
+                      <li class="third">Plus de plugins (~6k)</li>
+                    </ul>
+                  </li>
+                  <li class="second">Inconvénients
+                    <ul>
+                      <li class="third">Mauvaise gestion des streams (séquentielle, mauvaises performances, répétition obligatoire lors de modifications)</li>
+                      <li class="third">Workflow totalement synchrone (pas d'async possible)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h3 class="title">1 - Grunt / Gulp - <small class="subtitle">Grunt VS Gulp (2/2)</small></h3>
+          <div class="content">
+            <ul>
+              <li class="main">Gulp
+                <ul>
+                  <li class="second">Avantages
+                    <ul>
+                      <li class="third">Utilisation des streams <strong>NodeJS</strong> (meilleur performances)</li>
+                      <li class="third">Workflow aynschrone si besoin</li>
+                    </ul>
+                  </li>
+                  <li class="second">Inconvénients
+                    <ul>
+                      <li class="third">Plus jeune que <strong>Grunt</strong> donc moins de plugins</li>
+                    </ul>
+                  </li>
+                  <li class="second">Résumé
+                    <ul>
+                      <li class="third">
+                        <quote>”Gulp propose d'agir sur des flux de fichiers qui peuvent eux-mêmes proposer leur contenu sous forme de Buffer ou un flux de leur propres données.”</quote>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section>
+        <h3 class="title">2 - Exemples concrets</h3>
+        <div class="content">
+          <ol>
+            <li class="main">Présentation du code
+              <ul>
+                <li class="second"><a href="https://github.com/Galilee/vt-grunt-gulp">https://github.com/Galilee/vt-grunt-gulp</a></li>
+              </ul>
+            </li>
+            <li class="main">Exécution du code
+              <ul>
+                <li class="second">cf. démonstration</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <h1 class="title">Questions ?</h1>
+      </section>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+  <script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      dependencies: [{
+        src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }]
+    });
+  </script>
+</body>
+
+</html>

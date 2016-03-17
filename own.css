@@ -1,0 +1,41 @@
+.reveal section .title {
+    margin-bottom: 30px;
+}
+
+h3 small.subtitle {
+  color: #999;
+  font-style: italic;
+  vertical-align: baseline;
+}
+
+.reveal > .slides .content {
+    color: #777;
+    font-size: 0.7em;
+}
+
+.reveal > .slides > img {
+    padding: 20px;
+}
+
+.reveal > .slides .content .main {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.reveal > .slides .content .second {
+    font-size: 0.6em;
+    font-weight: normal;
+}
+.reveal > .slides .content .third {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.reveal pre code {
+    padding: 0 5px;
+}
+
+.reveal pre {
+    box-shadow: none;
+    margin: 0;
+}
